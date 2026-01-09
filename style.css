@@ -309,6 +309,69 @@ h2 {
     line-height: 1.5;
 }
 
+/* Certifications Section */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.cert-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid #333;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 5px 20px rgba(0, 242, 255, 0.1);
+}
+
+.cert-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.cert-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.cert-info .issuer {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cert-info .desc {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.btn-small {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #fff;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.btn-small:hover {
+    color: var(--accent-color);
+}
+
 .btn {
     display: inline-block;
     padding: 10px 25px;
@@ -477,7 +540,7 @@ input:focus, textarea:focus {
         justify-content: center;
     }
 
-    .skills-grid, .projects-grid {
+    .skills-grid, .projects-grid, .cert-grid {
         grid-template-columns: 1fr;
     }
 
