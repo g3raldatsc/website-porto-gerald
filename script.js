@@ -44,8 +44,23 @@ if (waForm) {
     });
 }
 
+function updateCodingStats() {
+    const startDate = new Date("2025-08-06");
+    const today = new Date();
+    const timeDiff = today - startDate;
+    const daysCount = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    const counterElement = document.getElementById("daysCount");
+
+    if (counterElement && daysCount > 0) {
+        counterElement.innerText = daysCount;
+    }
+}
+
+updateCodingStats();
+
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-links a');
+const toTopBtn = document.querySelector(".to-top");
 
 window.onscroll = () => {
     let current = "";
@@ -64,18 +79,12 @@ window.onscroll = () => {
             link.classList.add('active');
         }
     });
-};
 
-function updateCodingStats() {
-    const startDate = new Date("2025-08-06");
-    const today = new Date();
-    const timeDiff = today - startDate;
-    const daysCount = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-    const counterElement = document.getElementById("daysCount");
-
-    if (counterElement && daysCount > 0) {
-        counterElement.innerText = daysCount;
+    if (toTopBtn) {
+        if (window.pageYOffset > 500) {
+            toTopBtn.classList.add("active");
+        } else {
+            toTopBtn.classList.remove("active");
+        }
     }
-}
-
-updateCodingStats();
+};
