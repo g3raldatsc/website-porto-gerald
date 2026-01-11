@@ -14,6 +14,7 @@
     <meta property="og:type" content="website">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -31,7 +32,7 @@
     </nav>
 
     <section id="home">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-in" data-aos-duration="2000">
             <h1>Halo, Saya <span class="highlight">Gerald Jepedro Sitorus</span></h1>
             <p>Selamat datang di dunia digital saya.</p>
         </div>
@@ -40,18 +41,18 @@
     <main>
         <section id="about">
             <div class="container">
-                <h2>About Me</h2>
+                <h2 data-aos="fade-down">About Me</h2>
                 <div class="about-content">
                     
-                    <img src="assets/images/profilGeraldAbadi.jpeg" alt="Foto Profil Gerald" class="profile-pic">
+                    <img src="assets/images/profilGeraldAbadi.jpeg" alt="Foto Profil Gerald" class="profile-pic" data-aos="fade-right">
                     
-                    <div class="text">
+                    <div class="text" data-aos="fade-left">
                         <h3>Siapa Saya?</h3>
                         <p>Halo! Saya Gerald Jepedro Sitorus. Saya mahasiswa yang antusias mempelajari teknologi baru. Saat ini saya menguasai <strong>Python</strong> dan <strong>C++</strong>, serta mendalami ilmu Data Science.</p>
                         <p>Saya suka memecahkan masalah kompleks dengan kode efisien. Jika berkaitan dengan menemukan <em>insight</em> dari data, saya bisa lumayan bsa melakukannya karena saya sering latihan.</p>
                         <p>Hobi saya duduk di depan komputer saya. Biasanya, saya ulik-ulik algoritma machine learning. Dan jika gabut, saya juga terkadang membuat catatan pembelajaran saya. Kalian bisa unduh pembelajarannya di bawah ini.</p>
                         
-                        <div class="stats-row">
+                        <div class="stats-row" data-aos="fade-up">
                             <div class="stat-box">
                                 <span class="number" id="daysCount">136</span>
                                 <span class="label">Days in Coding</span>
@@ -66,7 +67,7 @@
                             </div>
                         </div>
 
-                        <div class="action-group">
+                        <div class="action-group" data-aos="fade-up" data-aos-delay="200">
                             <a href="https://troubled-relative-5db.notion.site/2cec92f1fb1c8048861bdf55981e6aa4" class="btn cv-btn" target="_blank">Download Here <i class="fas fa-download"></i></a>
                             
                             <div class="social-icons">
@@ -83,52 +84,52 @@
 
         <section id="skills">
             <div class="container">
-                <h2>My Skills</h2>
+                <h2 data-aos="fade-down">My Skills</h2>
                 <div class="skills-grid">
                     
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
                         <i class="fas fa-brain"></i>
                         <h3>Machine Learning</h3>
                         <p>Predictive Modeling, Neural Networks, & Deep Learning algorithms.</p>
                     </div>
 
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
                         <i class="fas fa-database"></i>
                         <h3>Big Data</h3>
                         <p>Processing large datasets efficiently for complex analysis.</p>
                     </div>
 
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
                         <i class="fas fa-chart-pie"></i>
                         <h3>Data Visualization</h3>
                         <p>Expert in Tableau, Excel, and Google Looker Studio to tell stories with data.</p>
                     </div>
 
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
                         <i class="fas fa-square-root-variable"></i>
                         <h3>Math & Statistics</h3>
                         <p>Strong foundation in Probability, Statistical Analysis, & Linear Algebra.</p>
                     </div>
 
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
                         <i class="fab fa-python"></i>
                         <h3>Python</h3>
                         <p>Data Science libraries (Pandas, NumPy) & Automation scripting.</p>
                     </div>
 
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
                         <i class="fas fa-code"></i>
                         <h3>C++</h3>
                         <p>High-performance computing & complex algorithm implementation.</p>
                     </div>
 
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="700">
                         <i class="fas fa-laptop-code"></i>
                         <h3>Web Development</h3>
                         <p>Building responsive interfaces with HTML, CSS, & JavaScript.</p>
                     </div>
 
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="800">
                         <i class="fas fa-puzzle-piece"></i>
                         <h3>Problem Solving</h3>
                         <p>Analytical thinking to solve logical challenges & optimize code.</p>
@@ -140,11 +141,11 @@
         
         <section id="projects">
             <div class="container">
-                <h2>Last Projects</h2>
+                <h2 data-aos="fade-down">Last Projects</h2>
                 
                 <div class="projects-grid">
                     
-                    <div class="project-card">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="card-image">
                             <img src="assets/images/AlphaFlow.jpeg" alt="Grafik Saham">
                         </div>
@@ -155,7 +156,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="card-image">
                             <img src="assets/images/logo-app.png" alt="Cepatkan Jadwalkan">
                         </div>
@@ -166,7 +167,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="card-image">
                             <img src="assets/images/saldoger.png" alt="Tampilan Sald0ger">
                         </div>
@@ -183,11 +184,11 @@
 
         <section id="certifications">
             <div class="container">
-                <h2>Certifications</h2>
+                <h2 data-aos="fade-down">Certifications</h2>
                 
                 <div class="cert-grid">
                     
-                    <div class="cert-card">
+                    <div class="cert-card" data-aos="flip-left" data-aos-delay="100">
                         <div class="cert-icon">
                             <i class="fas fa-certificate"></i>
                         </div>
@@ -199,7 +200,7 @@
                         </div>
                     </div>
 
-                    <div class="cert-card">
+                    <div class="cert-card" data-aos="flip-left" data-aos-delay="200">
                         <div class="cert-icon">
                             <i class="fas fa-robot"></i>
                         </div>
@@ -211,7 +212,7 @@
                         </div>
                     </div>
 
-                    <div class="cert-card">
+                    <div class="cert-card" data-aos="flip-left" data-aos-delay="300">
                         <div class="cert-icon">
                             <i class="fab fa-python"></i>
                         </div>
@@ -229,11 +230,11 @@
 
         <section id="contact">
             <div class="container">
-                <h2>Contact Me</h2>
+                <h2 data-aos="fade-down">Contact Me</h2>
                 
                 <div class="contact-wrapper">
                     
-                    <div class="contact-info">
+                    <div class="contact-info" data-aos="fade-right">
                         <h3>Mari Terhubung</h3>
                         <p>Punya sesuatu menarik atau sekadar ingin menyapa? Jangan ragu untuk mengirim pesan.</p>
                         
@@ -251,7 +252,7 @@
                         </div>
                     </div>
 
-                    <form class="contact-form" id="waForm">
+                    <form class="contact-form" id="waForm" data-aos="fade-left">
                         <div class="input-group">
                             <input type="text" id="name" placeholder="Nama" required>
                         </div>
@@ -283,6 +284,13 @@
         <p>&copy; 2025 | by: Gerald Jepedro Sitorus</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
