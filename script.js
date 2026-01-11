@@ -1,3 +1,8 @@
+AOS.init({
+    once: true,
+    duration: 1000
+});
+
 const namaElement = document.querySelector('.highlight');
 const deskripsiElement = document.querySelector('.hero-content p');
 const namaLengkap = "Gerald Jepedro Sitorus";
@@ -17,7 +22,7 @@ if (namaElement) {
             }
         }
     }
-    ngetik();
+    setTimeout(ngetik, 500);
 }
 
 const waForm = document.getElementById('waForm');
@@ -45,7 +50,7 @@ if (waForm) {
 }
 
 function updateCodingStats() {
-    const startDate = new Date("2025-08-06");
+    const startDate = new Date("2024-08-06"); 
     const today = new Date();
     const timeDiff = today - startDate;
     const daysCount = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
@@ -62,13 +67,14 @@ const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-links a');
 const toTopBtn = document.querySelector(".to-top");
 
-window.onscroll = () => {
+window.addEventListener('scroll', () => {
     let current = "";
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
         
-        if (pageYOffset >= (sectionTop - 200)) {
+        if (window.scrollY >= (sectionTop - 250)) {
             current = section.getAttribute('id');
         }
     });
@@ -81,10 +87,10 @@ window.onscroll = () => {
     });
 
     if (toTopBtn) {
-        if (window.pageYOffset > 500) {
+        if (window.scrollY > 500) {
             toTopBtn.classList.add("active");
         } else {
             toTopBtn.classList.remove("active");
         }
     }
-};
+});
