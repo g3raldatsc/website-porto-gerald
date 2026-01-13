@@ -50,7 +50,7 @@ if (waForm) {
 }
 
 function updateCodingStats() {
-    const startDate = new Date("2024-08-06"); 
+    const startDate = new Date("2025-08-06"); 
     const today = new Date();
     const timeDiff = today - startDate;
     const daysCount = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
