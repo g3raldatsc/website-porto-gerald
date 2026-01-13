@@ -221,6 +221,35 @@ h2 {
     transform: translateY(-3px);
 }
 
+.github-activity {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.github-activity h3 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.graph-container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 242, 255, 0.2);
+    overflow-x: auto;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.graph-container img {
+    width: 100%;
+    min-width: 600px;
+    height: auto;
+    display: block;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
@@ -271,10 +300,15 @@ h2 {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
+    border-color: var(--accent-color);
 }
 
 .card-image {
@@ -297,11 +331,15 @@ h2 {
 
 .card-info {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .card-info h3 {
-    color: var(--text-color);
+    color: var(--accent-color);
     margin-bottom: 10px;
+    font-size: 1.4rem;
 }
 
 .card-info p {
@@ -309,6 +347,25 @@ h2 {
     font-size: 0.95rem;
     margin-bottom: 20px;
     line-height: 1.5;
+    flex-grow: 1;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    margin-top: auto;
+}
+
+.badge {
+    background: rgba(0, 242, 255, 0.1);
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 242, 255, 0.3);
 }
 
 .cert-grid {
@@ -381,6 +438,9 @@ h2 {
     border-radius: 25px;
     font-weight: bold;
     transition: 0.3s;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
 }
 
 .btn:hover {
