@@ -94,3 +94,60 @@ window.addEventListener('scroll', () => {
         }
     }
 });
+
+const ctx = document.getElementById('mySkillChart');
+
+if (ctx) {
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Pandas', 'Scikit-learn', 'Matplotlib', 'NumPy', 'TensorFlow'],
+            datasets: [{
+                label: 'Interest Level & Proficiency (%)',
+                data: [95, 90, 85, 80, 75],
+                backgroundColor: 'rgba(0, 242, 255, 0.4)',
+                borderColor: '#00f2ff',
+                borderWidth: 2,
+                borderRadius: 5,
+                hoverBackgroundColor: 'rgba(0, 242, 255, 0.7)'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#e0e0e0',
+                        font: {
+                            family: "'Segoe UI', sans-serif"
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    grid: {
+                        color: 'rgba(255, 255, 255, 0.1)'
+                    },
+                    ticks: {
+                        color: '#aaa'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    },
+                    ticks: {
+                        color: '#e0e0e0',
+                        font: {
+                            weight: 'bold'
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
