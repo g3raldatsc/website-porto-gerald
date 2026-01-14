@@ -50,7 +50,7 @@ if (waForm) {
 }
 
 function updateCodingStats() {
-    const startDate = new Date("2025-08-06"); 
+    const startDate = new Date("2025-08-06");
     const today = new Date();
     const timeDiff = today - startDate;
     const daysCount = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
@@ -67,17 +67,19 @@ const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-links a');
 const toTopBtn = document.querySelector(".to-top");
 
-window.addEventListener('scroll', () => {
+function highlightMenu() {
     let current = "";
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
         if (window.scrollY >= (sectionTop - 250)) {
             current = section.getAttribute('id');
         }
     });
+
+    if (window.scrollY < 100) {
+        current = "home";
+    }
 
     navLinks.forEach(link => {
         link.classList.remove('active');
@@ -93,7 +95,10 @@ window.addEventListener('scroll', () => {
             toTopBtn.classList.remove("active");
         }
     }
-});
+}
+
+window.addEventListener('scroll', highlightMenu);
+highlightMenu();
 
 const ctx = document.getElementById('mySkillChart');
 
