@@ -22,7 +22,8 @@ const projectsData = {
         results: [
             "Dapat digunakan aktif oleh siapapu untuk manajemen kegiatan harian.",
             "Waktu muat (loading time) website dioptimalkan di bawah 1.5 detik.",
-            "Sinkronisasi data real-time antar perangkat tanpa delay."
+            "Sinkronisasi data real-time antar perangkat tanpa delay.",
+            "Melatih kemampuan komunikasi antar tim selama pengembangan proyek."
         ],
         link: "https://github.com/g3raldatsc/cepatkan-jadwalkan"
     },
