@@ -20,7 +20,7 @@ const projectsData = {
         tech: ["HTML", "CSS", "JavaScript", "Firebase"],
         desc: "Aplikasi manajemen waktu berbasis web yang ditujukan untuk mahasiswa. Memiliki fitur pengingat realtime dan sinkronisasi cloud menggunakan Firebase, dengan antarmuka yang minimalis.",
         results: [
-            "Digunakan aktif oleh rekan mahasiswa untuk manajemen tugas harian.",
+            "Dapat digunakan aktif oleh siapapu untuk manajemen kegiatan harian.",
             "Waktu muat (loading time) website dioptimalkan di bawah 1.5 detik.",
             "Sinkronisasi data real-time antar perangkat tanpa delay."
         ],
