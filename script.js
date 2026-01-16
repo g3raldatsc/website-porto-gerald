@@ -16,7 +16,7 @@ const projectsData = {
         link: "https://github.com/g3raldatsc/AlphaFLow"
     },
     "cepatkan": {
-        title: "Cepatkan Jadwalkan",
+        title: "Cepatkan Jadwalkan - Time Management App",
         tech: ["HTML", "CSS", "JavaScript", "Firebase"],
         desc: "Aplikasi manajemen waktu berbasis web yang ditujukan untuk mahasiswa. Memiliki fitur pengingat realtime dan sinkronisasi cloud menggunakan Firebase, dengan antarmuka yang minimalis.",
         results: [
