@@ -56,6 +56,7 @@ function openModal(projectId) {
         resultsContainer.innerHTML = project.results.map(r => `<li>${r}</li>`).join('');
 
         modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
         setTimeout(() => {
             modal.classList.add('active');
         }, 10);
@@ -66,6 +67,7 @@ function closeModal(event) {
     if (!event || event.target.className === 'modal-overlay' || event.target.className.includes('close-btn')) {
         const modal = document.getElementById('projectModal');
         modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
         
         setTimeout(() => {
             modal.style.display = 'none';
