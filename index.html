@@ -168,7 +168,7 @@
                                 <span class="badge">Pandas</span>
                             </div>
 
-                            <a href="https://github.com/g3raldatsc/AlphaFLow" class="btn">Lihat Kode</a>
+                            <button onclick="openModal('alphaflow')" class="btn">Lihat Detail</button>
                         </div>
                     </div>
 
@@ -185,7 +185,7 @@
                                 <span class="badge">Firebase</span>
                             </div>
 
-                            <a href="https://github.com/g3raldatsc/cepatkan-jadwalkan" class="btn">Lihat Kode</a>
+                            <button onclick="openModal('cepatkan')" class="btn">Lihat Detail</button>
                         </div>
                     </div>
 
@@ -203,7 +203,7 @@
                                 <span class="badge">Bootstrap</span>
                             </div>
 
-                            <a href="https://github.com/g3raldatsc/Saldoger" class="btn">Lihat Kode</a>
+                            <button onclick="openModal('saldoger')" class="btn">Lihat Detail</button>
                         </div>
                     </div>
 
@@ -303,6 +303,34 @@
 
     </main>
     
+    <div class="modal-overlay" id="projectModal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2 id="modalTitle">Project Title</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="tech-stack-modal" id="modalTech"></div>
+                
+                <div style="margin-top: 15px;">
+                    <p id="modalDesc">Description goes here...</p>
+                    
+                    <div class="key-results-box">
+                        <strong style="color: #00e5ff; display:block; margin-bottom:10px;">🚀 Key Results & Impact:</strong>
+                        <ul id="modalResults"></ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="modal-footer">
+                <a href="#" target="_blank" class="modal-btn" id="modalLink">
+                    <i class="fab fa-github"></i> Lihat Repository Code
+                </a>
+            </div>
+        </div>
+    </div>
+
     <a href="#" class="to-top">
         <i class="fas fa-chevron-up"></i>
     </a>
