@@ -3,6 +3,75 @@ AOS.init({
     duration: 1000
 });
 
+const projectsData = {
+    "alphaflow": {
+        title: "AlphaFlow - Stock Prediction",
+        tech: ["Python", "Pandas", "Scikit-Learn", "Machine Learning"],
+        desc: "AlphaFlow adalah kerangka kerja prediksi saham yang dirancang untuk mengatasi volatilitas pasar. Menggunakan algoritma Machine Learning untuk menganalisis data historis dan memprediksi tren masa depan dengan presisi yang lebih baik.",
+        results: [
+            "Meningkatkan akurasi prediksi sebesar 15% dibanding model regresi linear standar.",
+            "Mengurangi Mean Squared Error (MSE) hingga 0.02 pada data uji.",
+            "Mampu memproses dataset saham historis dalam hitungan detik."
+        ],
+        link: "https://github.com/g3raldatsc/AlphaFLow"
+    },
+    "cepatkan": {
+        title: "Cepatkan Jadwalkan",
+        tech: ["HTML", "CSS", "JavaScript", "Firebase"],
+        desc: "Aplikasi manajemen waktu berbasis web yang ditujukan untuk mahasiswa. Memiliki fitur pengingat realtime dan sinkronisasi cloud menggunakan Firebase, dengan antarmuka yang minimalis.",
+        results: [
+            "Digunakan aktif oleh rekan mahasiswa untuk manajemen tugas harian.",
+            "Waktu muat (loading time) website dioptimalkan di bawah 1.5 detik.",
+            "Sinkronisasi data real-time antar perangkat tanpa delay."
+        ],
+        link: "https://github.com/g3raldatsc/cepatkan-jadwalkan"
+    },
+    "saldoger": {
+        title: "Saldoger - Finance Tracker",
+        tech: ["Python", "Django", "Bootstrap", "PostgreSQL"],
+        desc: "Sistem pencatatan keuangan pribadi yang komprehensif. Dibuat dengan Django untuk backend yang kuat, aplikasi ini membantu pengguna melacak pemasukan dan pengeluaran dengan kategori otomatis.",
+        results: [
+            "Fitur auto-kategorisasi transaksi dengan akurasi tinggi.",
+            "Dapat menghasilkan laporan keuangan bulanan dalam format PDF.",
+            "Keamanan data terjamin dengan enkripsi autentikasi Django."
+        ],
+        link: "https://github.com/g3raldatsc/Saldoger"
+    }
+};
+
+function openModal(projectId) {
+    const project = projectsData[projectId];
+    const modal = document.getElementById('projectModal');
+    
+    if (project) {
+        document.getElementById('modalTitle').innerText = project.title;
+        document.getElementById('modalDesc').innerText = project.desc;
+        document.getElementById('modalLink').href = project.link;
+        
+        const techContainer = document.getElementById('modalTech');
+        techContainer.innerHTML = project.tech.map(t => `<span>${t}</span>`).join('');
+        
+        const resultsContainer = document.getElementById('modalResults');
+        resultsContainer.innerHTML = project.results.map(r => `<li>${r}</li>`).join('');
+
+        modal.style.display = 'flex';
+        setTimeout(() => {
+            modal.classList.add('active');
+        }, 10);
+    }
+}
+
+function closeModal(event) {
+    if (!event || event.target.className === 'modal-overlay' || event.target.className.includes('close-btn')) {
+        const modal = document.getElementById('projectModal');
+        modal.classList.remove('active');
+        
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 300);
+    }
+}
+
 const namaElement = document.querySelector('.highlight');
 const deskripsiElement = document.querySelector('.hero-content p');
 const namaLengkap = "Gerald Jepedro Sitorus";
